@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Kanban</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dotted-border {
+            border: solid rgb(179, 177, 177);
+            border-style: dotted;
+            border-width: 3px;
+            padding: 10px;
+        }
+
+        .column-content {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-[#b81750] shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-semibold text-white">
+                REAL ESTATE FLOW
+            </div>
+            <nav class="space-x-6">
+                <a href="#" class="text-white hover:text-blue-200">Projetos</a>
+                <a href="#" class="text-white hover:text-blue-200">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-8">
+        <h2 class="text-2xl text-gray-400 font-semibold mb-3">Gestão de Projetos</h2>
+        <div class="flex space-x-4">
+            <!-- Planejamento Column -->
+            <div class="w-1/5">
+                <div class="bg-[#b81750] rounded-t-lg p-4">
+                    <div class="flex gap-3">
+                        <h2 class="text-md font-bold text-white uppercase">Planejamento</h2>
+                        <h2 class="text-xs font-bold text-white" 
+                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                    </div>
+                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
+                    <div class="bg-gray-400 h-2 rounded-full mt-2">
+                        <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 1</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 2</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 3</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 4</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novos Negócios Column -->
+            <div class="w-1/5">
+                <div class="bg-[#b81750] rounded-t-lg p-4">
+                    <div class="flex gap-3">
+                        <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                        <h2 class="text-xs font-bold text-white" 
+                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                    </div>
+                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
+                    <div class="bg-gray-400 h-2 rounded-full mt-2">
+                        <div class="bg-white h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 6</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 7</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 8</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 9</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 10</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Incorporação Column -->
+            <div class="w-1/5">
+                <div class="bg-[#b81750] rounded-t-lg p-4">
+                    <div class="flex gap-3">
+                        <h2 class="text-lg font-bold text-white uppercase">Incorporação</h2>
+                        <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                    </div>
+                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
+                    <div class="bg-gray-400 h-2 rounded-full mt-2">
+                        <div class="bg-white h-2 rounded-full" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 11</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 12</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 13</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 14</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 15</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lançamento Column -->
+            <div class="w-1/5">
+                <div class="bg-[#b81750] rounded-t-lg p-4">
+                    <div class="flex gap-3">
+                        <h2 class="text-lg font-bold text-white uppercase">Lançamento</h2>
+                        <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                    </div>
+                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
+                    <div class="bg-gray-400 h-2 rounded-full mt-2">
+                        <div class="bg-white h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 16</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 17</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 18</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 19</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 20</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto Executivo Column -->
+            <div class="w-1/5">
+                <div class="bg-[#b81750] rounded-t-lg p-4">
+                    <div class="flex gap-3">
+                        <h2 class="text-lg font-bold text-white uppercase">Projeto Exec.</h2>
+                        <h2 class="text-xs font-bold text-white" 
+                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                    </div>
+                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
+                    <div class="bg-gray-400 h-2 rounded-full mt-2">
+                        <div class="bg-white h-2 rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 21</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 22</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 23</p>
+                    </div>
+                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
+                        <p class="text-gray-500">Tarefa 24</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow-sm">
+                        <p class="text-gray-800">Tarefa 25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
