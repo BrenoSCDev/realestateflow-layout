@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadro Kanban</title>
+    <title>Real Estate Flow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.4/flowbite.min.js"></script>
     <style>
         .dotted-border {
             border: solid rgb(179, 177, 177);
@@ -15,191 +17,523 @@
         }
 
         .column-content {
-            max-height: 400px;
+            max-height: 390px;
             overflow-y: auto;
         }
     </style>
 </head>
 
 <body class="bg-white">
-    <!-- Header -->
-    <header class="bg-[#b81750] shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-semibold text-white">
-                REAL ESTATE FLOW
+    <nav class="bg-[#b81750] border-gray-200 shadow-md">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white"><i class="fas fa-chart-line"></i>
+                    REAL ESTATE FLOW</span>
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#b81750]">
+                    <li class="mt-2">
+                        <a href="./projetos.html" class="block py-2 px-3 rounded md:bg-transparent md:text-white md:p-0">Projetos</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center w-full py-2 px-3 text-white rounded md:p-0 md:w-auto">
+                            <img src="https://sholaemmanuel.com/wp-content/uploads/2024/06/photo-1570295999919-56ceb5ecca61.jpg" alt="User Profile" class="w-10 h-10 rounded-full mr-2">
+                            Breno Sousa
+                        </button>
+                        
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"><i class="fas fa-user mr-2"></i>
+                                        Meu Perfil</a>
+                                </li>
+                                <li>
+                                    <a href="./login.html" class="block px-4 py-2 hover:bg-gray-100"><i class="fas fa-sign-out-alt"></i>
+                                        Sair</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <nav class="space-x-6">
-                <a href="#" class="text-white hover:text-blue-200">Projetos</a>
-                <a href="#" class="text-white hover:text-blue-200">Perfil</a>
-            </nav>
         </div>
-    </header>
-
+    </nav>
     <!-- Main Content -->
-    <div class="container mx-auto p-8">
-        <h2 class="text-2xl text-gray-400 font-semibold mb-3">Gestão de Projetos</h2>
-        <div class="flex space-x-4">
-            <!-- Planejamento Column -->
-            <div class="w-1/5">
-                <div class="bg-[#b81750] rounded-t-lg p-4">
-                    <div class="flex gap-3">
-                        <h2 class="text-md font-bold text-white uppercase">Planejamento</h2>
-                        <h2 class="text-xs font-bold text-white" 
-                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+    <div class=" mx-auto p-4">
+        <h2 class="text-2xl text-gray-400 font-semibold mb-3">Lançamento Encanto das Águas</h2>
+        <div class="overflow-x-auto">
+            <div class="flex space-x-4 min-w-full">
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
-                    <div class="bg-gray-400 h-2 rounded-full mt-2">
-                        <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 1</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 2</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 3</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 4</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 5</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Novos Negócios Column -->
-            <div class="w-1/5">
-                <div class="bg-[#b81750] rounded-t-lg p-4">
-                    <div class="flex gap-3">
-                        <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
-                        <h2 class="text-xs font-bold text-white" 
-                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
-                    </div>
-                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
-                    <div class="bg-gray-400 h-2 rounded-full mt-2">
-                        <div class="bg-white h-2 rounded-full" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 6</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 7</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 8</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 9</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 10</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Incorporação Column -->
-            <div class="w-1/5">
-                <div class="bg-[#b81750] rounded-t-lg p-4">
-                    <div class="flex gap-3">
-                        <h2 class="text-lg font-bold text-white uppercase">Incorporação</h2>
-                        <h2 class="text-xs font-bold text-white" 
-                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
-                    </div>
-                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
-                    <div class="bg-gray-400 h-2 rounded-full mt-2">
-                        <div class="bg-white h-2 rounded-full" style="width: 50%;"></div>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="./table.html">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 11</p>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 12</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 13</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 14</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 15</p>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Lançamento Column -->
-            <div class="w-1/5">
-                <div class="bg-[#b81750] rounded-t-lg p-4">
-                    <div class="flex gap-3">
-                        <h2 class="text-lg font-bold text-white uppercase">Lançamento</h2>
-                        <h2 class="text-xs font-bold text-white" 
-                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
-                    <div class="bg-gray-400 h-2 rounded-full mt-2">
-                        <div class="bg-white h-2 rounded-full" style="width: 90%"></div>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 16</p>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 17</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 18</p>
-                    </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 19</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 20</p>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Projeto Executivo Column -->
-            <div class="w-1/5">
-                <div class="bg-[#b81750] rounded-t-lg p-4">
-                    <div class="flex gap-3">
-                        <h2 class="text-lg font-bold text-white uppercase">Projeto Exec.</h2>
-                        <h2 class="text-xs font-bold text-white" 
-                        style="border-radius: 5px; padding: 5px; border: 1px solid white;">12 atividades</h2>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <h4 class="text-sm font-semibold text-white">VGV: R$1.000.000,00</h4>
-                    <div class="bg-gray-400 h-2 rounded-full mt-2">
-                        <div class="bg-white h-2 rounded-full" style="width: 20%"></div>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content">
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 21</p>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 22</p>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 23</p>
+                </div>
+                <div class="min-w-[390px] min-h-[800px]">
+                    <div class="bg-[#b81750] rounded-t-lg p-4">
+                        <div class="flex gap-3">
+                            <h2 class="text-md font-bold text-white uppercase">Novos Negócios</h2>
+                            <h2 class="text-xs font-bold text-white" 
+                            style="border-radius: 5px; padding: 5px; border: 1px solid white;">8 atividades</h2>
+                        </div>
+                        <h4 class="text-sm font-semibold text-white">VGV: R$600.000,00</h4>
+                        <div class="flex items-center space-x-2 mt-2">
+                            <div class="flex-1 bg-gray-400 h-2 rounded-full">
+                                <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-white">60%</span>
+                        </div>
                     </div>
-                    <div class="dotted-border bg-gray-200 rounded-md shadow-sm">
-                        <p class="text-gray-500">Tarefa 24</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-md shadow-sm">
-                        <p class="text-gray-800">Tarefa 25</p>
+                    <div class="rounded-b-lg shadow p-4 space-y-4 bg-gray-100 column-content min-h-[800px]">
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Prospecção de Negócios
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Gerar leads qualificados, apresentar o projeto, e cultivar relacionamentos que possam resultar em vendas ou parcerias.
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 60%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">60%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Prospecção de Terrenos</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Inteligência de Mercado</h5>
+                        </div>
+                        <div class="max-w-sm p-6 bg-white rounded-lg border border-[#b81750]">
+                            <div class="flex">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-semibold text-[#b81750]">
+                                        <i class="fas fa-tasks"></i> Estudo de massa e quadro de áreas.
+                                    </h5>
+                                </a>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                                Otimizar a distribuição e o uso dos espaços no empreendimento para maximizar funcionalidade e atratividade..
+                            </p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
+                                    <div class="bg-[#b81750] h-2 rounded-full" style="width: 30%;"></div>
+                                </div>
+                                <span class="text-sm font-semibold text-[#b81750]">30%</span>
+                            </div>
+                        </div>                     
+                        <div class="max-w-sm p-6 bg-gray-200 rounded-lg dotted-border text-center">
+                            <i class="fas fa-plus text-gray-600 text-3xl mb-4"></i> 
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-600">Orçamento Parametizado</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
